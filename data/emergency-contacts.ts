@@ -1,0 +1,81 @@
+import type { EmergencyContact, EmergencyResource } from "@/types/emergency"
+
+export const emergencyContacts: EmergencyContact[] = [
+  {
+    id: "police-117",
+    name: "Police Nationale",
+    phone: "117",
+    type: "police",
+    available24h: true,
+    location: "Madagascar",
+    description: "Numéro d'urgence national pour la police",
+  },
+  {
+    id: "medical-124",
+    name: "SAMU Madagascar",
+    phone: "124",
+    type: "medical",
+    available24h: true,
+    location: "Madagascar",
+    description: "Service d'aide médicale urgente",
+  },
+  {
+    id: "violence-women",
+    name: "Ligne Verte Femmes",
+    phone: "+261 32 07 063 07",
+    type: "support",
+    available24h: false,
+    location: "Antananarivo",
+    description: "Ligne d'écoute pour femmes victimes de violence",
+  },
+  {
+    id: "sos-femmes",
+    name: "SOS Femmes Madagascar",
+    phone: "+261 20 22 560 60",
+    type: "support",
+    available24h: false,
+    location: "Madagascar",
+    description: "Association d'aide aux femmes en détresse",
+  },
+]
+
+export const emergencyResources: EmergencyResource[] = [
+  {
+    id: "centre-ecoute-femmes",
+    title: "Centre d'Écoute pour Femmes",
+    description: "Soutien psychologique et juridique pour femmes victimes de violence",
+    type: "counseling",
+    contact: "+261 20 22 560 60",
+    address: "Antananarivo, Madagascar",
+    available24h: false,
+    languages: ["Malagasy", "Français"],
+  },
+  {
+    id: "hopital-soavinandriana",
+    title: "Hôpital Soavinandriana",
+    description: "Centre hospitalier avec service gynécologique d'urgence",
+    type: "medical",
+    contact: "+261 20 22 238 88",
+    address: "Antananarivo, Madagascar",
+    available24h: true,
+    languages: ["Malagasy", "Français"],
+  },
+  {
+    id: "avocat-femmes",
+    title: "Réseau d'Avocats pour Femmes",
+    description: "Assistance juridique gratuite pour femmes victimes de violence",
+    type: "legal",
+    contact: "+261 34 12 345 67",
+    available24h: false,
+    languages: ["Malagasy", "Français"],
+  },
+  {
+    id: "refuge-femmes",
+    title: "Foyer d'Accueil Sécurisé",
+    description: "Hébergement temporaire sécurisé pour femmes en danger",
+    type: "shelter",
+    contact: "+261 32 11 222 33",
+    available24h: true,
+    languages: ["Malagasy", "Français"],
+  },
+]

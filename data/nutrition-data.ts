@@ -1,0 +1,170 @@
+import type { FoodItem, NutritionRecommendation, MealPlan } from "@/types/nutrition"
+
+export const malgasyFoods: FoodItem[] = [
+  {
+    id: "vary",
+    name: "Riz rouge",
+    localName: "Vary mena",
+    category: "grains",
+    nutrients: ["Fer", "Magnésium", "Fibres", "Vitamines B"],
+    benefits: ["Énergie durable", "Réduit la fatigue", "Améliore la digestion"],
+    availability: "toute l'année",
+    region: "Toute l'île",
+    imageUrl: "/red-rice-madagascar.jpg",
+    preparation: ["Rincer le riz", "Cuire à l'eau salée", "Laisser reposer 10 minutes"],
+  },
+  {
+    id: "bredes",
+    name: "Brèdes",
+    localName: "Anana",
+    category: "vegetables",
+    nutrients: ["Fer", "Acide folique", "Vitamine C", "Calcium"],
+    benefits: ["Combat l'anémie", "Renforce l'immunité", "Soutient la formation sanguine"],
+    availability: "toute l'année",
+    region: "Toute l'île",
+    imageUrl: "/bredes-madagascar-greens.jpg",
+    preparation: ["Nettoyer les feuilles", "Faire revenir à l'huile", "Ajouter de l'ail et gingembre"],
+  },
+  {
+    id: "voanjobory",
+    name: "Haricots de Lima",
+    localName: "Voanjobory",
+    category: "proteins",
+    nutrients: ["Protéines", "Fer", "Magnésium", "Potassium"],
+    benefits: ["Apport protéique", "Régule la tension", "Soutient les muscles"],
+    availability: "saison sèche",
+    region: "Hauts plateaux",
+    imageUrl: "/lima-beans-madagascar.jpg",
+    preparation: ["Tremper une nuit", "Cuire 45 minutes", "Assaisonner avec du gingembre"],
+  },
+  {
+    id: "tamarind",
+    name: "Tamarin",
+    localName: "Kily",
+    category: "fruits",
+    nutrients: ["Vitamine C", "Potassium", "Magnésium", "Antioxydants"],
+    benefits: ["Anti-inflammatoire", "Améliore la digestion", "Réduit les crampes"],
+    availability: "saison sèche",
+    region: "Côte ouest",
+    imageUrl: "/tamarind-fruit-madagascar.jpg",
+    preparation: ["Extraire la pulpe", "Mélanger avec de l'eau", "Filtrer et sucrer"],
+  },
+  {
+    id: "coconut",
+    name: "Noix de coco",
+    localName: "Voanio",
+    category: "fruits",
+    nutrients: ["Électrolytes", "Magnésium", "Potassium", "Graisses saines"],
+    benefits: ["Hydratation", "Énergie rapide", "Soulage les crampes"],
+    availability: "toute l'année",
+    region: "Côtes",
+    imageUrl: "/coconut-madagascar.jpg",
+    preparation: ["Percer et boire l'eau", "Râper la chair", "Presser pour le lait"],
+  },
+  {
+    id: "ginger",
+    name: "Gingembre",
+    localName: "Sakamalaho",
+    category: "herbs",
+    nutrients: ["Gingérol", "Vitamine C", "Magnésium"],
+    benefits: ["Anti-nausée", "Anti-inflammatoire", "Améliore la circulation"],
+    availability: "toute l'année",
+    region: "Toute l'île",
+    imageUrl: "/ginger-madagascar.jpg",
+    preparation: ["Éplucher et râper", "Infuser dans l'eau chaude", "Ajouter du miel"],
+  },
+]
+
+export const nutritionRecommendations: NutritionRecommendation[] = [
+  {
+    id: "menstruation-nutrition",
+    phase: "menstruation",
+    title: "Nutrition pendant les règles",
+    description: "Aliments riches en fer pour compenser les pertes sanguines et réduire les crampes",
+    foods: malgasyFoods.filter((food) => food.nutrients.includes("Fer")),
+    benefits: [
+      "Compense les pertes en fer",
+      "Réduit la fatigue",
+      "Soulage les crampes menstruelles",
+      "Maintient l'énergie",
+    ],
+    tips: [
+      "Buvez beaucoup d'eau pour rester hydratée",
+      "Évitez les aliments trop salés qui augmentent les ballonnements",
+      "Privilégiez les tisanes de gingembre pour les nausées",
+      "Mangez des petites portions fréquentes",
+    ],
+    priority: "high",
+  },
+  {
+    id: "follicular-nutrition",
+    phase: "follicular",
+    title: "Nutrition phase folliculaire",
+    description: "Aliments énergétiques pour soutenir la croissance folliculaire et l'énergie croissante",
+    foods: malgasyFoods.filter((food) => food.benefits.includes("Énergie durable")),
+    benefits: [
+      "Soutient la production d'œstrogènes",
+      "Augmente l'énergie naturellement",
+      "Améliore l'humeur",
+      "Prépare l'ovulation",
+    ],
+    tips: [
+      "Augmentez les protéines pour soutenir la croissance",
+      "Incluez des grains entiers pour l'énergie stable",
+      "Consommez des légumes verts pour l'acide folique",
+      "Hydratez-vous bien",
+    ],
+    priority: "medium",
+  },
+  {
+    id: "ovulation-nutrition",
+    phase: "ovulation",
+    title: "Nutrition pendant l'ovulation",
+    description: "Aliments antioxydants pour protéger l'ovule et optimiser la fertilité",
+    foods: malgasyFoods.filter((food) => food.nutrients.includes("Antioxydants")),
+    benefits: [
+      "Protège la qualité ovulaire",
+      "Soutient les hormones reproductives",
+      "Améliore la circulation",
+      "Optimise la fertilité",
+    ],
+    tips: [
+      "Privilégiez les fruits colorés riches en antioxydants",
+      "Maintenez un bon équilibre hydrique",
+      "Évitez l'excès de caféine",
+      "Incluez des graisses saines",
+    ],
+    priority: "high",
+  },
+  {
+    id: "luteal-nutrition",
+    phase: "luteal",
+    title: "Nutrition phase lutéale",
+    description: "Aliments stabilisants pour gérer les fringales et l'humeur avant les règles",
+    foods: malgasyFoods.filter((food) => food.nutrients.includes("Magnésium")),
+    benefits: ["Stabilise l'humeur", "Réduit les fringales", "Améliore le sommeil", "Prépare aux règles suivantes"],
+    tips: [
+      "Augmentez le magnésium pour réduire le stress",
+      "Limitez le sucre raffiné",
+      "Privilégiez les glucides complexes",
+      "Maintenez des repas réguliers",
+    ],
+    priority: "high",
+  },
+]
+
+export const sampleMealPlans: MealPlan[] = [
+  {
+    id: "menstruation-plan",
+    name: "Plan nutritionnel - Règles",
+    phase: "menstruation",
+    meals: {
+      breakfast: [malgasyFoods[0], malgasyFoods[5]], // Riz rouge + Gingembre
+      lunch: [malgasyFoods[1], malgasyFoods[2]], // Brèdes + Voanjobory
+      dinner: [malgasyFoods[0], malgasyFoods[1]], // Riz rouge + Brèdes
+      snacks: [malgasyFoods[3], malgasyFoods[4]], // Tamarin + Coco
+    },
+    totalCalories: 1800,
+    keyNutrients: ["Fer", "Magnésium", "Vitamine C"],
+  },
+]
