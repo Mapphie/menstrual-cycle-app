@@ -4,76 +4,76 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette for menstrual cycle app with calming cyan primary and warm amber accent */
+  /* Updated color palette for medical professional interface */
   --background: oklch(1 0 0); /* Pure white background */
-  --foreground: oklch(0.35 0 0); /* Dark gray for text (#4b5563) */
-  --card: oklch(0.98 0 0); /* Light gray for cards (#f9fafb) */
-  --card-foreground: oklch(0.35 0 0);
+  --foreground: oklch(0.25 0 0); /* Dark gray for text (#374151) */
+  --card: oklch(0.97 0.02 240); /* Light blue for cards (#f0f4ff) */
+  --card-foreground: oklch(0.25 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.35 0 0);
-  --primary: oklch(0.55 0.15 200); /* Cyan-600 (#0891b2) for primary actions */
+  --popover-foreground: oklch(0.25 0 0);
+  --primary: oklch(0.25 0.15 240); /* Deep blue (#1e3a8a) for professional look */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.35 0 0); /* Dark gray for secondary elements */
+  --secondary: oklch(0.55 0.25 15); /* Vibrant red (#ff4d4f) for critical alerts */
   --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.98 0 0); /* Light gray for muted elements */
-  --muted-foreground: oklch(0.35 0 0);
-  --accent: oklch(0.7 0.15 70); /* Amber (#f59e0b) for call-to-action */
+  --muted: oklch(0.97 0.02 240); /* Light blue for muted elements */
+  --muted-foreground: oklch(0.25 0 0);
+  --accent: oklch(0.55 0.25 15); /* Critical alerts red */
   --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.55 0.25 25); /* Red for warnings */
+  --destructive: oklch(0.55 0.25 25); /* Red for destructive actions */
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0 0); /* Light border (#e5e7eb) */
+  --border: oklch(0.85 0 0); /* Light border (#d1d5db) */
   --input: oklch(1 0 0);
-  --ring: oklch(0.55 0.15 200 / 0.4); /* Cyan ring for focus states */
-  --chart-1: oklch(0.55 0.15 200); /* Cyan for charts */
-  --chart-2: oklch(0.7 0.15 70); /* Amber for charts */
-  --chart-3: oklch(0.55 0.25 25); /* Red for charts */
-  --chart-4: oklch(0.35 0 0); /* Dark gray for charts */
-  --chart-5: oklch(0.98 0 0); /* Light gray for charts */
-  --radius: 0.5rem; /* Slightly smaller radius for softer look */
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.35 0 0);
-  --sidebar-primary: oklch(0.55 0.15 200);
+  --ring: oklch(0.25 0.15 240 / 0.5); /* Deep blue ring for focus states */
+  --chart-1: oklch(0.55 0.15 240); /* Blue for charts */
+  --chart-2: oklch(0.55 0.25 15); /* Red for charts */
+  --chart-3: oklch(0.65 0.15 140); /* Green for charts */
+  --chart-4: oklch(0.7 0.15 70); /* Yellow for charts */
+  --chart-5: oklch(0.5 0.2 280); /* Purple for charts */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.97 0.02 240);
+  --sidebar-foreground: oklch(0.25 0 0);
+  --sidebar-primary: oklch(0.25 0.15 240);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.7 0.15 70);
+  --sidebar-accent: oklch(0.55 0.25 15);
   --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.92 0 0);
-  --sidebar-ring: oklch(0.55 0.15 200 / 0.4);
+  --sidebar-border: oklch(0.85 0 0);
+  --sidebar-ring: oklch(0.25 0.15 240 / 0.5);
 }
 
 .dark {
-  /* Updated dark mode colors to maintain the calming theme */
+  /* Dark mode colors for medical interface */
   --background: oklch(0.1 0 0);
   --foreground: oklch(0.95 0 0);
-  --card: oklch(0.15 0 0);
+  --card: oklch(0.15 0.02 240);
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.15 0 0);
   --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.6 0.15 200); /* Slightly brighter cyan for dark mode */
-  --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.25 0 0);
-  --secondary-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.4 0.15 240);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.6 0.25 15);
+  --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.25 0 0);
   --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.75 0.15 70); /* Brighter amber for dark mode */
-  --accent-foreground: oklch(0.1 0 0);
+  --accent: oklch(0.6 0.25 15);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6 0.25 25);
   --destructive-foreground: oklch(0.95 0 0);
   --border: oklch(0.25 0 0);
   --input: oklch(0.25 0 0);
-  --ring: oklch(0.6 0.15 200 / 0.4);
-  --chart-1: oklch(0.6 0.15 200);
-  --chart-2: oklch(0.75 0.15 70);
-  --chart-3: oklch(0.6 0.25 25);
-  --chart-4: oklch(0.7 0 0);
-  --chart-5: oklch(0.25 0 0);
-  --sidebar: oklch(0.15 0 0);
+  --ring: oklch(0.4 0.15 240 / 0.5);
+  --chart-1: oklch(0.6 0.15 240);
+  --chart-2: oklch(0.6 0.25 15);
+  --chart-3: oklch(0.7 0.15 140);
+  --chart-4: oklch(0.75 0.15 70);
+  --chart-5: oklch(0.6 0.2 280);
+  --sidebar: oklch(0.15 0.02 240);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.6 0.15 200);
-  --sidebar-primary-foreground: oklch(0.1 0 0);
-  --sidebar-accent: oklch(0.75 0.15 70);
-  --sidebar-accent-foreground: oklch(0.1 0 0);
+  --sidebar-primary: oklch(0.4 0.15 240);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.6 0.25 15);
+  --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.6 0.15 200 / 0.4);
+  --sidebar-ring: oklch(0.4 0.15 240 / 0.5);
 }
 
 @theme inline {

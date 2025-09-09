@@ -2,7 +2,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Calendar, Heart, Droplets, Activity, AlertCircle, TrendingUp, Trophy, Shield, Settings } from "lucide-react"
+import {
+  Calendar,
+  Heart,
+  Droplets,
+  Activity,
+  AlertCircle,
+  TrendingUp,
+  Trophy,
+  Shield,
+  Settings,
+  Stethoscope,
+} from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -25,6 +36,12 @@ export default function HomePage() {
               <h1 className="text-xl font-semibold text-foreground">CycleCare Madagascar</h1>
             </div>
             <div className="flex items-center gap-2">
+              <Link href="/medical">
+                <Button variant="outline" size="sm">
+                  <Stethoscope className="h-4 w-4 mr-2" />
+                  Interface Médecin
+                </Button>
+              </Link>
               <Link href="/settings">
                 <Button variant="ghost" size="sm">
                   <Settings className="h-4 w-4" />
